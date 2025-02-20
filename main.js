@@ -19,7 +19,6 @@ var validCredentials = {
     'Aakriti': '706',
     'Aarshu': '707',
     'Aarya': '708',
-    'Aaryan': '709',
     'Binamra': '738',
     'Dixit': '747',
     'Abhi': '716',
