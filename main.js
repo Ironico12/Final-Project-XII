@@ -23,7 +23,7 @@ var validCredentials = {
     'Binamra': '738',
     'Dixit': '747',
     'Abhi': '716',
-    'Bivek': '734'
+    'Ambu': '723',
 };
 
 function authenticateUser(event) {
