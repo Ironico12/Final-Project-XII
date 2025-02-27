@@ -1,0 +1,171 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Car Rental System</title> 
+    <link rel="stylesheet" href="main.css">
+</head> 
+<body> 
+
+    <div id="login-form"> 
+        <h2>Login</h2> 
+        <form onsubmit="authenticateUser(event)"> 
+            <label for="username">Username:</label> 
+            <input type="text" id="username" required> 
+            <label for="password">Password:</label> 
+            <input type="password" id="password" required> 
+            <button type="submit">Login</button> 
+        </form> 
+    </div> 
+
+    <section id="car-rental-section" style="display: none;"> 
+        <header> 
+            <h1>Car Rental System</h1> 
+            <p>Find Your Perfect Ride</p> 
+            <div id="search-bar"> 
+                <input type="text" id="search-input" placeholder="Search for a car..."> 
+                <button onclick="searchCars()">Search</button> 
+            </div> 
+        </header> 
+
+        <div class="car-list"> 
+            <div class="car"><h3>Toyota Camry</h3> 
+                <img src="pics/toycam.jpg" alt="Toyota Camry">
+                <p>Price per day: $50</p> 
+                <button onclick="rentCar('Toyota Camry', 50)">Rent Now</button><br><br>
+                <button onclick="reportCar('Toyota Camry')">Report</button>
+            </div>
+
+
+            <div class="car">
+                <h3>Honda Civic</h3> 
+                <img src="pics/hondacivic.webp" alt="Honda Civic">
+                <p>Price per day: $45</p> 
+                <button onclick="rentCar('Honda Civic', 45)">Rent Now</button><br><br>
+                <button onclick="reportCar('Honda Civic')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Ford Mustang</h3> 
+                <img src="pics/fordmustang.webp" alt="Ford Mustang">
+                <p>Price per day: $70</p>
+                 <button onclick="rentCar('Ford Mustang', 70)">Rent Now</button> <br><br>
+                <button onclick="reportCar('Ford Mustang')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Mahindra Thar</h3> 
+                <img src="pics/manhtihar.jpg" alt="Mahindra Thar">
+                <p>Price per day: $15</p> 
+                <button onclick="rentCar('Mahindra Thar', 15)">Rent Now</button><br><br>
+                 <button onclick="reportCar('Mahindra Thar')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Lamborghini Revuelto</h3>
+                <img src="pics/lamborevuelto.webp" alt="Lamborghini Revuelto">
+                <p>Price per day: $120</p> 
+                <button onclick="rentCar('Lamborghini Revuelto', 120)">Rent Now</button><br><br>
+                <button onclick="reportCar('Lamborghini Revuelto')">Report</button>
+            </div>
+
+            <div class="car"><h3>Toyota Innova Crysta</h3>
+                <img src="pics/Toyota-Innova-Crysta.jpg" alt="Toyota Innova Crysta">
+                <p>Price per day: $70</p> 
+                <button onclick="rentCar('Toyota Innova Crysta', 70)">Rent Now</button> <br><br>
+                <button onclick="reportCar('Toyota Innova Crysta')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Chevrolet Malibu</h3> 
+                <img src="pics/chevy malibu.webp" alt="Chevrolet Malibu">
+                <p>Price per day: $55</p> 
+                <button onclick="rentCar('Chevrolet Malibu', 55)">Rent Now</button><br><br>
+                <button onclick="reportCar('Chevrolet Malibu')">Report</button>
+            </div>
+
+            <div class="car"><h3>Nissan Altima</h3> 
+                <img src="pics/nissanaltime.webp" alt="Nissan Altima">
+                <p>Price per day: $48</p> 
+                <button onclick="rentCar('Nissan Altima', 48)">Rent Now</button> <br><br>
+                <button onclick="reportCar('Nissan Altima')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Audi A4</h3> 
+                <img src="pics/audi-a6.webp" alt="Audi A4">
+                <p>Price per day: $85</p> 
+                <button onclick="rentCar('Audi A4', 85)">Rent Now</button> <br><br>
+                <button onclick="reportCar('Audi A4')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Hyundai Sonata</h3> 
+                <img src="pics/hyundai osnata.webp" alt="Hyundai Sonata">
+                <p>Price per day: $52</p> 
+                <button onclick="rentCar('Hyundai Sonata', 52)">Rent Now</button> <br><br>
+                <button onclick="reportCar('Hyundai Sonata')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Kia Optima</h3>
+                <img src="pics/kia optima.webp" alt="Kia Optima">
+                <p>Price per day: $50</p> 
+                <button onclick="rentCar('Kia Optima', 50)">Rent Now</button> <br><br>
+                <button onclick="reportCar('Kia Optima')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Volkswagen Passat</h3> 
+                <img src="pics/volkswagen.webp" alt="Volkswagen Passat">
+                <p>Price per day: $60</p> 
+                <button onclick="rentCar('Volkswagen Passat', 60)">Rent Now</button> <br><br>
+                <button onclick="reportCar('Volkswagen Passat')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Alto 800</h3> 
+                <img src="pics/alto800.webp" alt="Alto 800">
+                <p>Price per day: $12</p> 
+                <button onclick="rentCar('Alto 800', 12)">Rent Now</button> <br><br>
+                <button onclick="reportCar('Alto 800')">Report</button>
+            </div>
+
+            <div class="car">
+                <h3>Subaru Legacy</h3> 
+                <img src="pics/subaru legacy.webp" alt="Subaru Legacy">
+                <p>Price per day: $55</p> 
+                <button onclick="rentCar('Subaru Legacy', 55)">Rent Now</button><br><br>
+                <button onclick="reportCar('Subaru Legacy')">Report</button>
+            </div>
+
+        </div> 
+
+        <button id="feedback-button" onclick="showFeedbackForm()">Leave Feedback</button>     
+    </section> 
+
+    <div id="payment-page" style="display: none;"> 
+        <h2>Payment Confirmation</h2> 
+        <p>Thank you for choosing our car rental service!</p> 
+        <form action="process_payment.php" method="POST">
+            <p>Total Amount: $<span id="totalAmount"></span></p>
+            <input type="hidden" id="hiddenTotalAmount" name="totalAmount">
+            <button type="submit">Complete Payment</button>
+        </form><button onclick="completePayment()">Complete Payment</button> 
+        <br> <br> 
+        <button onclick="goBackToHub()">Go Back to Hub</button>     
+    </div> 
+
+    <section id="feedback-section" style="display: none;"> 
+        <h2>Feedback</h2> 
+        <form id="feedback-form"> 
+            <label for="feedback">Your Feedback:</label><br> 
+            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br> 
+            <button type="submit">Submit Feedback</button> 
+        </form> 
+    </section> 
+    <a href="payment.html" id="go-to-payment" style="display: none;">Go to Payment</a>
+
+    <script src="main.js"></script>
+</body> 
+</html>
+
